@@ -1,60 +1,109 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Textune – Coming Soon</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-    a.button {
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
-      color: #fff;
-      background-color: #0078d7;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-    a.button:hover {
-      background-color: #005fa3;
-    }
-    footer {
-      position: absolute;
-      bottom: 1rem;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-  </style>
-</head>
-<body>
-  <h1>Textune is Coming Soon</h1>
-  <p>
-    Textune.io is a cloud-based AI platform that helps companies analyze and process unstructured communication — such as emails, messages, and transcripts — using advanced language models. We deliver async, API-first solutions for tone detection, intent classification, and smart automation.
-  </p>
-  <a href="mailto:hello@textune.io" class="button">Contact us</a>
-  <footer>
-    &copy; 2025 Textune.io. All rights reserved.
-  </footer>
-</body>
+	<head>
+		<meta charset="utf-8"/>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+		<title>Textune – Find the meaning between the lines</title>
+		<link href="style.css" rel="stylesheet"/>
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<meta property="og:title" content="Textune – Find the meaning between the lines." />
+		<meta property="og:description" content="Extract meaning from unstructured communication: emails, chats, transcripts." />
+		<meta property="og:image" content="assets/og-image.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://textune.io" />	
+	</head>
+	<body>
+		<!-- Sekcja Hero -->
+		<section id="hero">
+			<div class="logo-container">
+				<img src="assets/logo-textune.png" alt="Textune logo"/>
+			</div>
+			<div class="container">
+				<h1>Textune is coming soon</h1>
+				<p class="tagline">Find the meaning between the lines.</p>
+				<p class="description">
+	  Textune helps you uncover what matters in messages, emails, and transcripts — faster.  
+	  Turn chaos into clarity with AI-powered classification, tagging, tone detection and summaries.
+				</p>
+				<a class="button" href="#contact">Contact us</a>
+			</div>
+			<div class="illustration">
+				<img alt="Hero illustration" src="assets/illustrations/hero.svg"/>
+			</div>
+		</section>
+		<!-- Sekcja Opis -->
+		<section id="about" class="fade-in">
+			<div class="container">
+				<h2>What is Textune?</h2>
+				<p>
+      Textune.io helps you understand more — by reading less.
+      We turn messy communication into structured insight using AI: classify content, detect tone and intent, tag what matters, and generate instant TL;DR.
+      Sync or async. One API. From chaos to clarity — instantly.
+				</p>
+				<div class="feature-grid">
+					<div class="feature-card">
+						<img alt="Smart Classification" src="assets/illustrations/feature-classify.svg"/>
+						<h3>Smart Classification</h3>
+						<p>Group messages by type, intent or domain. Using AI models, Textune can intelligently categorize messages and transcripts into actionable groups.</p>
+					</div>
+					<div class="feature-card">
+						<img alt="Tagging" src="assets/illustrations/feature-tags.svg"/>
+						<h3>Tagging &amp; Keywords</h3>
+						<p>Extract meaningful tags, topics or identifiers to help automate routing, filtering or decision-making processes.</p>
+					</div>
+					<div class="feature-card">
+						<img alt="Summaries" src="assets/illustrations/feature-summary.svg"/>
+						<h3>TL;DR Summaries</h3>
+						<p>Automatically condense long messages into short, meaningful summaries for faster understanding and reporting.</p>
+					</div>
+					<div class="feature-card">
+						<img alt="Tone and Intent" src="assets/illustrations/feature-tone.svg"/>
+						<h3>Tone &amp; Intent Detection</h3>
+						<p>Detect emotional tone and intention of communication to support classification, alerting or automation flows.</p>
+					</div>
+					<div class="feature-card">
+						<img alt="Clean HTML and Quotes" src="assets/illustrations/feature-clean.png"/>
+						<h3>Clean HTML &amp; Quotes</h3>
+						<p>Automatically remove signatures, previous replies, quote blocks and HTML noise for clean processing.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Sekcja Jak działa -->
+		<section id="how-it-works" class="slide-up">
+		  <div class="container">
+			<h2>How it works</h2>
+			<p>
+			  Textune processes your raw communication — from messy text to structured insights — using a clean, fast SaaS API.
+			</p>
+			<div class="diagram-wrapper">
+			  <img src="assets/illustrations/flow-animation.png" alt="Textune processing diagram" />
+			</div>
+		  </div>
+		</section>
+		<!-- Sekcja Kontakt -->
+		<section id="contact" class="fade-in">
+			<div class="container contact-grid">
+				<div class="contact-text">
+					<h2>Let's stay in touch</h2>
+					<p>
+        Whether you’re curious about the tech, want to partner up, or just have a question — we’d love to hear from you.
+					</p>
+					<div style="text-align: center;">
+						<a href="mailto:hello@textune.io" class="button">Say hello →</a>
+					</div>
+				</div>
+				<div class="contact-image">
+					<img src="assets/illustrations/contact.svg" alt="Contact illustration"/>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Stopka -->
+		<footer>
+			<p>© 2025 Textune.io – All rights reserved</p>
+		</footer>
+		<script src="script.js"></script>
+	</body>
 </html>

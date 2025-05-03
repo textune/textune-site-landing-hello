@@ -1,0 +1,340 @@
+/* Reset i bazowe style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #1a1a1a;
+  background: #f9f9fb;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Topbar */
+.topbar {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+
+/* Sekcje */
+section {
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Hero */
+#hero {
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+#hero .tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#hero .description {
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+}
+
+#hero .button {
+  background-color: #00aaff;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#hero .button:hover {
+  background-color: #0078cc;
+}
+
+#hero .illustration {
+  margin-top: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* About */
+#about h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* How it works */
+#how-it-works h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#diagram-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+/* Contact */
+#contact {
+  background: #eeeeee;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#contact .button {
+  display: inline-block;
+  background-color: #00aaff;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+
+/* === Nowoczesna siatka feature-card z hover === */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: all 0.4s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.feature-card:hover {
+  transform: scale(1.04);
+  background: #f9fcff;
+  z-index: 1;
+}
+
+.feature-card img {
+  max-height: 80px;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* Scroll-triggered animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.8s ease, transform 0.8s ease;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Contact improved layout */
+.contact-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-text {
+  flex: 1 1 300px;
+}
+
+.contact-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.contact-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.logo-container {
+  text-align: center;
+  margin: 0 auto 2rem;
+  display: auto;
+}
+
+.logo-container img {
+  height: 100px;
+  width: auto;
+  filter: brightness(0) invert(1); /* jeśli obrazek nie jest biały */
+}
+
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero .tagline {
+    font-size: 1.2rem;
+  }
+
+  #about h2,
+  #how-it-works h2,
+  #contact h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+.diagram-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.diagram-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}

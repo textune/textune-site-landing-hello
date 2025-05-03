@@ -1,0 +1,10 @@
+# Node modules (if using any tooling later)
+node_modules/
+
+# Build
+dist/
+build/
+
+# System
+.DS_Store
+Thumbs.db
