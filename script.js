@@ -22,23 +22,23 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".fade-in, .slide-up").forEach(el => observer.observe(el));
 
-// Scale-down on scroll to contact
-window.addEventListener("scroll", () => {
-  const img = document.querySelector(".scroll-shrink");
-  const contact = document.getElementById("contact");
+// // Scale-down on scroll to contact
+// window.addEventListener("scroll", () => {
+  // const img = document.querySelector(".scroll-shrink");
+  // const contact = document.getElementById("contact");
 
-  if (img && contact) {
-    const contactTop = contact.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+  // if (img && contact) {
+    // const contactTop = contact.getBoundingClientRect().top;
+    // const windowHeight = window.innerHeight;
 
-    if (contactTop < windowHeight) {
-      const scale = Math.max(0.7, 1 - ((windowHeight - contactTop) / windowHeight) * 0.3);
-      img.style.transform = `scale(${scale})`;
-    } else {
-      img.style.transform = "scale(1)";
-    }
-  }
-});
+    // if (contactTop < windowHeight) {
+      // const scale = Math.max(0.7, 1 - ((windowHeight - contactTop) / windowHeight) * 0.3);
+      // img.style.transform = `scale(${scale})`;
+    // } else {
+      // img.style.transform = "scale(1)";
+    // }
+  // }
+// });
 
 
 document.getElementById("contact-form").addEventListener("submit", function(e) {
@@ -67,3 +67,42 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       console.error(err);
     });
 });
+
+
+function validateEmail() {
+  const emailField = document.getElementById("email");
+  const status = document.getElementById("form-status");
+  const value = emailField.value.trim();
+
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (value && !regex.test(value)) {
+    status.textContent = "Please enter a valid email address.";
+    emailField.classList.add("invalid");
+  } else {
+    status.textContent = "";
+    emailField.classList.remove("invalid");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emailInput = document.getElementById("email");
+  const status = document.getElementById("form-status");
+
+  emailInput.addEventListener("input", () => {
+    const value = emailInput.value.trim();
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (regex.test(value)) {
+      status.textContent = "";
+      emailInput.classList.remove("invalid");
+    }
+  });
+});
+
+function updateCharCount() {
+  const textarea = document.getElementById("message");
+  const counter = document.getElementById("char-count");
+  counter.textContent = textarea.value.length;
+}
+

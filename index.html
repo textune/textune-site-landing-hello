@@ -110,16 +110,20 @@
   <section id="contact" class="fade-in">
     <div class="container contact-grid">
       <div class="contact-text">
-        <h2>Let's stay in touch</h2>
-        <p>Want to collaborate, ask a question, or stay informed? We’d love to hear from you.</p>
+        <h2>Subscribe for updates</h2>
+        <p>Leave your name and email to subscribe to early updates about Textune's launch and features. No spam, just insights.</p>
 		<form id="contact-form" class="contact-form">
-		  <input type="text" name="name" id="name" placeholder="Your name" required />
-		  <input type="email" name="email" id="email" placeholder="Your email" required />
-		  <textarea name="message" placeholder="Your message..." required></textarea>
+			<input type="text" name="name" id="name" placeholder="Your name" required autocomplete="name" maxlength="50" />
+			<input type="email" name="email" id="email" placeholder="Your email" required autocomplete="email" maxlength="254" onblur="validateEmail()" />
+			<textarea name="message" id="message" placeholder="Your message..." maxlength="500" oninput="updateCharCount()"></textarea>
+			<p class="char-count"><span id="char-count">0</span> / 500 characters</p>
 
-		  <div class="g-recaptcha" data-sitekey="6LerIy0rAAAAAMMuawSJnBG7xx9ZmxamJh1ULkpH"></div>
-
-		  <button type="submit">Send message →</button>
+			<div class="form-footer">
+			  <div class="g-recaptcha" data-sitekey="6LerIy0rAAAAAMMuawSJnBG7xx9ZmxamJh1ULkpH"></div>
+			  <div class="button-wrapper">
+				<button type="submit">Subscribe →</button>
+			  </div>
+			</div>
 		  <p id="form-status" class="form-status"></p>
 		</form>
       </div>
@@ -131,6 +135,7 @@
 
   <!-- Stopka -->
   <footer>
+    <p>Contact: <a href="mailto:hello@textune.io">hello@textune.io</a></p>
     <p>© 2025 Textune.io – All rights reserved</p>
   </footer>
   <script src="script.js"></script>

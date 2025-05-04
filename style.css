@@ -412,3 +412,66 @@ footer {
   margin-top: 1rem;
   font-weight: 500;
 }
+
+
+.contact-form .form-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  margin-left: 1rem;
+}
+
+.contact-form .g-recaptcha {
+  transform: scale(1);
+  transform-origin: left center;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.form-footer .button-wrapper {
+  margin-left: auto;
+}
+
+
+/* Walidacja formularza – podświetlanie błędów */
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+  border-color: #e74c3c;
+  background-color: #fff6f6;
+}
+
+.contact-form input:invalid:focus,
+.contact-form textarea:invalid:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+/* Styl komunikatu błędu */
+#form-status {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+input.invalid {
+  border-color: #e74c3c;
+  background-color: #fff6f6;
+}
+
+
+.char-count {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
